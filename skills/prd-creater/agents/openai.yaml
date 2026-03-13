@@ -1,0 +1,4 @@
+interface:
+  display_name: "PRD Creater"
+  short_description: "Draft PRDs from the Notion template catalog"
+  default_prompt: "Use $prd-creater to pick the best-fit Notion PRD template pattern and draft the document."
