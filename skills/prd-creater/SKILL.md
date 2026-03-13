@@ -18,6 +18,7 @@ description: Create product requirement documents using the synced Notion Market
 2. Choose the right marketplace pattern before drafting.
    - Use `references/notion-prd-marketplace-catalog.md` for a quick scan of the synced marketplace results.
    - Use `references/notion-prd-marketplace-catalog.json` when you need richer details such as full descriptions, extracted body text, creator metadata, or category tags.
+   - Use `references/notion-prd-marketplace-scenario-guide.md` when the user asks for a shortlist by use case, team maturity, product type, or operating model.
    - If the user names a specific template, match by `name` or `slug` first.
    - If the user wants the safest default, prefer official Notion templates.
    - If the user wants a niche use case, use `references/notion-prd-marketplace-selection-guide.md` to map the request to the closest template family.
@@ -69,6 +70,7 @@ description: Create product requirement documents using the synced Notion Market
 - `references/notion-official-prd-template.md`: Summary of the Notion official PRD structure, writing steps, and optional context layers derived from Notion's official help center, blog, and marketplace pages.
 - `references/notion-prd-marketplace-catalog.md`: Human-readable index of the synced PRD marketplace results.
 - `references/notion-prd-marketplace-catalog.json`: Full structured catalog with metadata, categories, links, and extracted body text for each synced template.
+- `references/notion-prd-marketplace-scenario-guide.md`: Scenario-based shortlist guide that groups the synced templates into practical families such as official baseline, AI PRD, startup MVP, roadmap planning, engineering spec, and business ops.
 - `references/notion-prd-marketplace-selection-guide.md`: Quick heuristics for mapping a user request to the closest marketplace template family.
 - `assets/notion-prd-template.md`: Paste-ready Markdown scaffold for drafting PRDs in a Notion-friendly format.
 - `scripts/sync_notion_marketplace_catalog.py`: Refresh the marketplace catalog from Notion's public search page.

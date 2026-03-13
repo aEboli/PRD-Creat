@@ -5,6 +5,10 @@
 
 下方为本仓库当前同步到的 Notion Marketplace `PRD` 模板完整清单。本清单来自公开搜索页 `https://www.notion.com/templates/search?query=PRD` 的同步快照。
 
+如果你想先按使用场景筛选模板，而不是先看原始目录，优先查看：
+
+- `C:\Users\AEboli\Documents\PRD-Creat\Readme\模板分类与场景-PRD-Creater.md`
+
 ---
 
 # Notion Marketplace PRD Template Catalog

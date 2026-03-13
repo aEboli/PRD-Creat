@@ -28,8 +28,22 @@
 
 - `C:\Users\AEboli\Documents\PRD-Creat\skills\prd-creater\references\notion-prd-marketplace-catalog.md`
 - `C:\Users\AEboli\Documents\PRD-Creat\skills\prd-creater\references\notion-prd-marketplace-catalog.json`
+- `C:\Users\AEboli\Documents\PRD-Creat\skills\prd-creater\references\notion-prd-marketplace-scenario-guide.md`
+- `C:\Users\AEboli\Documents\PRD-Creat\Readme\模板分类与场景-PRD-Creater.md`
 
-## 4. 触发方式
+## 4. 快速安装
+
+如果你要在其他 AI 工具里复用这份 skill，优先使用仓库根目录下的安装脚本：
+
+- Windows：`C:\Users\AEboli\Documents\PRD-Creat\scripts\install-prd-creater.ps1`
+- macOS / Linux：`C:\Users\AEboli\Documents\PRD-Creat\scripts\install-prd-creater.sh`
+
+常见用法：
+
+- 安装到默认 Codex 目录：执行 `README.md` 里的默认安装命令。
+- 安装到其他工具目录：把目标目录替换为该工具的本地 `skills`、`prompts` 或类似目录。
+
+## 5. 触发方式
 
 推荐两种方式：
 
@@ -42,7 +56,7 @@
 - `根据这份会议纪要，输出一版适合粘贴到 Notion 的 PRD。`
 - `Use $prd-creater to write an English PRD with goals, KPIs, scope, and release criteria.`
 
-## 5. 建议输入
+## 6. 建议输入
 
 为了让输出更稳定，建议尽量提供以下信息中的一部分：
 
@@ -57,7 +71,7 @@
 
 如果信息不完整，skill 会尽量补出最小可用版本，并把不确定内容标记为 `待确认`。
 
-## 6. 使用逻辑
+## 7. 使用逻辑
 
 默认分两步：
 
@@ -66,7 +80,12 @@
 
 如果用户明确说“用官方模板”“只看免费模板”“按 Internal Tool PRD 那种风格写”，skill 会优先按目录元数据筛选。
 
-## 7. 标准输出结构
+如果用户说的是“先帮我挑模板”“给我按场景做 shortlist”，优先参考：
+
+- `C:\Users\AEboli\Documents\PRD-Creat\skills\prd-creater\references\notion-prd-marketplace-scenario-guide.md`
+- `C:\Users\AEboli\Documents\PRD-Creat\Readme\模板分类与场景-PRD-Creater.md`
+
+## 8. 标准输出结构
 
 默认会按下面的顺序组织内容：
 
@@ -91,23 +110,30 @@
 - Design and interaction
 - Qualitative feedback
 
-## 8. 资源文件说明
+## 9. 资源文件说明
 
 - `SKILL.md`：skill 的触发规则、工作流和输出规范。
 - `references/notion-official-prd-template.md`：Notion 官方 PRD 模板和相关文章的提炼版本。
 - `references/notion-prd-marketplace-catalog.md`：98 条模板的人读索引。
 - `references/notion-prd-marketplace-catalog.json`：98 条模板的结构化目录，含描述、类别、链接、抓取出的正文文本。
+- `references/notion-prd-marketplace-scenario-guide.md`：按场景重组后的英文模板分类指南，便于 skill 先做 shortlist。
 - `references/notion-prd-marketplace-selection-guide.md`：模板家族选型规则。
 - `assets/notion-prd-template.md`：可直接复用的 PRD Markdown 模板。
 - `scripts/sync_notion_marketplace_catalog.py`：重新同步 Notion Marketplace `PRD` 搜索结果的脚本。
 - `agents/openai.yaml`：UI 展示名、简要描述和默认提示词。
 
-## 9. 维护建议
+## 10. 维护建议
 
 - 如果 Notion Marketplace 模板数量、价格或链接变化，优先运行：
 
 ```bash
 python C:\Users\AEboli\Documents\PRD-Creat\skills\prd-creater\scripts\sync_notion_marketplace_catalog.py --query PRD
+```
+
+- 同步完成后，继续运行：
+
+```bash
+python C:\Users\AEboli\Documents\PRD-Creat\scripts\generate_prd_template_guides.py
 ```
 
 - 如果 Notion 官方 PRD 模板结构发生明显变化，优先更新 `references/notion-official-prd-template.md`。
