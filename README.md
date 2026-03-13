@@ -9,6 +9,7 @@
 - `skills/prd-creater/`：skill 本体、模板骨架、参考资料和同步脚本
 - `Readme/模板清单-PRD-Creater.md`：98 个模板的原始完整清单
 - `Readme/模板分类与场景-PRD-Creater.md`：98 个模板的分类表和推荐使用场景
+- `Readme/测试模板-设计PRD.md`：使用 `prd-creater` 生成的设计类 PRD 测试样例
 - `Readme/使用说明-PRD-Creater.md`：协作者使用说明
 - `Readme/PRD-PRD-Creater.md`：本项目 PRD
 - `scripts/`：模板分类生成脚本和跨平台安装脚本
